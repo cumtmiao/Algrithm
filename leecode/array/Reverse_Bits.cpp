@@ -18,11 +18,11 @@ uint32_t reverseBits(uint32_t n) {
     uint32_t res=0;
     for(uint32_t i=0;i<32;i++)
     {
-        if((pointer&n)==pointer)
+        if((pointer&n)==pointer)//如果当前位为1，则对结果中的当前位赋值1
         {
             res|=1;
         }
-        else
+        else//否则，结果当前位为0
         {
             res=res&(~1);
         }
