@@ -41,7 +41,7 @@ int search2(vector<int>&nums, int target)
 		}
 		else
 		{
-			if (target>=nums[l] && target < nums[mid])r = mid;
+			if (target>=nums[l] && target < nums[mid])r = mid-1;
 			else l = mid + 1;
 		}	
 	}
