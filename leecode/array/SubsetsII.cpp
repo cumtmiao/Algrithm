@@ -21,7 +21,25 @@ If nums = [1,2,2], a solution is:
 #include<algorithm>
 using namespace std;
 vector<vector<int>> subsetsWithDup(vector<int>& nums) {
-	∫‹Õ∑¥Û
-	http ://www.cnblogs.com/ganganloveu/p/4143592.html
-    https ://leetcode.com/problems/subsets-ii/discuss/
+    vector<vector<int>> res;
+	vector<int> temp;
+	sort(nums.begin(), nums.end());
+	int n = nums.size();
+	res.push_back(temp);
+	if (n == 0) return res;
+	for (int i = 0; i < n; i++)
+	{
+		int ns = res.size();
+		for (int j = 0; j < ns; j++)
+		{
+			res.push_back(res[j]);
+			res.back().push_back(nums[i]);		
+		}
+	}
+	set<vector<int>> setofres;
+	for(int i=0;i<res.size();i++)
+	{
+		setofres.insert(res[i]);
+	}
+	return vector<vector<int>>(setofres.begin(),setofres.end());
 }
