@@ -55,7 +55,8 @@
         "utility": "cpp",
         "valarray": "cpp",
         "algorithm": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "unordered_set": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
